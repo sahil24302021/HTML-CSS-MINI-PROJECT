@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Holdings / Kite</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="dash-nav">
+        <div class="dash-left">
+            <div style="font-weight: 700; color: #ff5722; font-size: 1.2rem; margin-right: 20px;">Kite</div>
+            <div style="font-size: 0.85rem; font-weight: 500;">
+                <span style="color: #666;">NIFTY</span> <span style="color: #df514c;">19,542.65</span>
+            </div>
+        </div>
+        <div class="dash-right">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="orders.html">Orders</a>
+            <a href="#" class="active" style="color: #ff5722;">Holdings</a> <a href="#">Positions</a>
+            <a href="funds.html">Funds</a>
+            <a href="index.html">Logout</a> 
+        </div>
+    </nav>
+
+    <div class="dash-layout">
+        <aside class="sidebar">
+            <div style="padding: 15px; border-bottom: 1px solid #eee;">
+                <input type="text" placeholder="Search eg: infy, bse, nifty..." style="width: 100%; padding: 10px; border: 1px solid #ddd; outline: none;">
+            </div>
+            <div class="market-item"><span class="stock">RELIANCE</span><span class="price-down">2,450.00 -1.2%</span></div>
+            <div class="market-item"><span class="stock">TCS</span><span class="price-up">3,560.00 +0.8%</span></div>
+            <div class="market-item"><span class="stock">INFY</span><span class="price-down">1,420.00 -0.4%</span></div>
+        </aside>
+
+        <main class="main-dash" style="padding: 30px;">
+            <h2 style="font-weight: 400; font-size: 1.4rem; color: #444; margin-bottom: 20px;">Holdings (4)</h2>
+
+            <table class="holdings-table">
+                <thead>
+                    <tr>
+                        <th>Instrument</th>
+                        <th>Qty.</th>
+                        <th>Avg. cost</th>
+                        <th>LTP</th>
+                        <th>Cur. val</th>
+                        <th>P&L</th>
+                        <th>Net chg.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="stock-name">Gold Bees</td>
+                        <td>50</td>
+                        <td>42.50</td>
+                        <td>51.20</td>
+                        <td>2,560.00</td>
+                        <td class="profit">+435.00</td>
+                        <td class="profit">+20.47%</td>
+                    </tr>
+                    <tr>
+                        <td class="stock-name">HDFC Bank</td>
+                        <td>10</td>
+                        <td>1,500.00</td>
+                        <td>1,600.00</td>
+                        <td>16,000.00</td>
+                        <td class="profit">+1,000.00</td>
+                        <td class="profit">+6.66%</td>
+                    </tr>
+                    <tr>
+                        <td class="stock-name">Infosys</td>
+                        <td>25</td>
+                        <td>1,450.00</td>
+                        <td>1,420.00</td>
+                        <td>35,500.00</td>
+                        <td class="loss">-750.00</td>
+                        <td class="loss">-2.06%</td>
+                    </tr>
+                    <tr>
+                        <td class="stock-name">Reliance</td>
+                        <td>5</td>
+                        <td>2,500.00</td>
+                        <td>2,450.00</td>
+                        <td>12,250.00</td>
+                        <td class="loss">-250.00</td>
+                        <td class="loss">-1.00%</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="holdings-summary">
+                <div class="summary-item">
+                    <p>Total Investment</p>
+                    <h3>₹ 65,875.00</h3>
+                </div>
+                <div class="summary-item">
+                    <p>Current Value</p>
+                    <h3>₹ 66,310.00</h3>
+                </div>
+                <div class="summary-item">
+                    <p>Day's P&L</p>
+                    <h3 class="loss">-140.50 (-0.21%)</h3>
+                </div>
+                <div class="summary-item">
+                    <p>Total P&L</p>
+                    <h3 class="profit" style="font-size: 1.5rem;">+435.00 (+0.66%)</h3>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>

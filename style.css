@@ -1,0 +1,843 @@
+/* =========================================
+   1. GLOBAL
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    color: #444;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+    transition: 0.2s;
+}
+
+a:hover {
+    color: #387ed1;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =========================================
+   2. ANIMATIONS
+   ========================================= */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeUp 1s ease-out forwards;
+}
+
+/* =========================================
+   3. NAVBAR & MOBILE MENU
+   ========================================= */
+.navbar {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 22px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-img {
+    height: 18px;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+.nav-links a {
+    font-size: 0.95rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #387ed1;
+}
+
+/* Mobile Menu Logic */
+#menu-toggle {
+    display: none;
+}
+
+.hamburger-label {
+    display: none;
+    margin-left: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #444;
+}
+
+.mobile-menu {
+    display: none;
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0 20px 20px 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    border-top: 1px solid #eee;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 15px 0;
+    border-bottom: 1px solid #f9f9f9;
+    color: #444;
+    font-weight: 500;
+}
+
+#menu-toggle:checked~.mobile-menu {
+    display: block;
+    animation: fadeUp 0.3s ease-out;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger-label {
+        display: block;
+    }
+}
+
+/* =========================================
+   4. HERO SECTION
+   ========================================= */
+.hero {
+    text-align: center;
+    padding: 100px 0 80px 0;
+}
+
+.hero img {
+    width: 70%;
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    display: block;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    color: #444;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.btn-blue {
+    background-color: #387ed1;
+    color: white;
+    padding: 12px 35px;
+    border-radius: 3px;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.btn-blue:hover {
+    background-color: #2a6bb8;
+    color: #fff;
+}
+
+/* =========================================
+   5. SECTIONS
+   ========================================= */
+.section {
+    padding: 80px 0;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.col {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+.section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    font-weight: 500;
+    color: #444;
+}
+
+.section-block {
+    margin-bottom: 30px;
+}
+
+.section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #444;
+}
+
+.section p {
+    font-size: 1.05rem;
+    color: #666;
+    line-height: 1.8;
+}
+
+.arrow-link {
+    color: #387ed1;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* =========================================
+   6. PRICING
+   ========================================= */
+.pricing-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+    .pricing-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+.pricing-cards {
+    display: flex;
+    gap: 20px;
+    flex: 1.5;
+    width: 100%;
+}
+
+.p-card {
+    border: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+    border-radius: 3px;
+    flex: 1;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.p-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.p-card h1 {
+    font-size: 3rem;
+    color: #ff5722;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+
+/* =========================================
+   7. FOOTER
+   ========================================= */
+.footer-cta {
+    text-align: center;
+    padding: 80px 0;
+    background: #fff;
+}
+
+.footer-cta h2 {
+    font-size: 2rem;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.footer-cta p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+footer {
+    background-color: #fbfbfb;
+    border-top: 1px solid #eee;
+    padding: 60px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons i {
+    font-size: 1.1rem;
+    color: #888;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.social-icons i:hover {
+    color: #387ed1;
+}
+
+.footer-col h4 {
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: #444;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-fineprint {
+    font-size: 0.75rem;
+    color: #999;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.footer-links-row {
+    margin-top: 10px;
+}
+
+.footer-links-row a {
+    margin-right: 10px;
+    color: #666;
+    font-weight: 500;
+}
+
+/* =========================================
+   8. LOGIN PAGE
+   ========================================= */
+.login-body {
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 900px;
+    background: #fff;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+}
+
+.login-left {
+    flex: 1;
+    text-align: center;
+}
+
+.login-right {
+    flex: 0.8;
+    text-align: center;
+}
+
+.login-right h2 {
+    font-size: 1.6rem;
+    color: #444;
+    margin: 10px 0 30px;
+    font-weight: 500;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: none;
+}
+
+.btn-login {
+    width: 100%;
+    background: #ff5722;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-weight: 600;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.login-footer {
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #387ed1;
+}
+
+/* =========================================
+   9. DASHBOARD & HOLDINGS
+   ========================================= */
+.dash-nav {
+    height: 65px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.dash-left {
+    display: flex;
+    align-items: center;
+}
+
+.dash-right {
+    display: flex;
+    gap: 25px;
+}
+
+.dash-right a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #444;
+}
+
+.dash-right a:hover {
+    color: #ff5722;
+}
+
+.dash-layout {
+    display: flex;
+    height: calc(100vh - 65px);
+}
+
+.sidebar {
+    width: 350px;
+    background: #fff;
+    border-right: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.market-item {
+    padding: 15px 20px;
+    border-bottom: 1px solid #f8f8f8;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.market-item:hover {
+    background-color: #f9f9f9;
+}
+
+.price-up {
+    color: #4caf50;
+}
+
+.price-down {
+    color: #df514c;
+}
+
+.main-dash {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.main-dash h1 {
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #444;
+}
+
+.holdings-card {
+    background: #fff;
+    padding: 40px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    text-align: center;
+    max-width: 600px;
+}
+
+.big-val {
+    font-size: 2.5rem;
+    color: #444;
+    margin-top: 10px;
+}
+
+/* Holdings Table */
+.holdings-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.holdings-table th,
+.holdings-table td {
+    text-align: right;
+    padding: 12px 15px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #eee;
+    color: #444;
+}
+
+.holdings-table th {
+    font-weight: 500;
+    color: #999;
+}
+
+.holdings-table th:first-child,
+.holdings-table td:first-child {
+    text-align: left;
+}
+
+.stock-name {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.profit {
+    color: #4caf50;
+}
+
+.loss {
+    color: #df514c;
+}
+
+.holdings-summary {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.summary-item h3 {
+    font-weight: 400;
+    margin-top: 5px;
+    color: #444;
+}
+
+.summary-item p {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+/* =========================================
+   10. BUY WINDOW POPUP
+   ========================================= */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-overlay:target {
+    display: flex;
+}
+
+.buy-window {
+    background: #fff;
+    width: 450px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Inter', sans-serif;
+}
+
+.buy-header {
+    background: #387ed1;
+    padding: 15px 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buy-body {
+    padding: 20px;
+}
+
+.input-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.75rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.buy-footer {
+    padding: 15px 20px;
+    background: #f9f9f9;
+    border-top: 1px solid #eee;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-submit {
+    background: #387ed1;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    font-weight: 600;
+    cursor: pointer;
+    flex: 1;
+}
+
+.btn-cancel {
+    background: #fff;
+    border: 1px solid #ddd;
+    color: #444;
+    padding: 10px 20px;
+    border-radius: 3px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* =========================================
+   11. ORDERS PAGE STYLES
+   ========================================= */
+.sub-nav {
+    display: flex;
+    gap: 30px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.sub-nav a {
+    font-size: 0.9rem;
+    color: #666;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.sub-nav a.active {
+    color: #387ed1;
+    /* Primary Blue */
+    font-weight: 500;
+}
+
+.sub-nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -11px;
+    /* Aligns with border line */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #387ed1;
+}
+
+/* Status Badges */
+.badge {
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.badge-complete {
+    background: #e8f7e8;
+    color: #4caf50;
+}
+
+/* Green bg */
+.badge-rejected {
+    background: #fbecec;
+    color: #df514c;
+}
+
+/* Red bg */
+.badge-open {
+    background: #eef5ff;
+    color: #387ed1;
+}
+
+/* Blue bg */
+
+
+/* =========================================
+   12. FUNDS PAGE STYLES
+   ========================================= */
+.funds-layout {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.funds-card {
+    flex: 1;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 30px;
+    text-align: center;
+}
+
+.funds-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.funds-header h2 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #444;
+}
+
+.account-id {
+    font-size: 0.8rem;
+    background: #eee;
+    padding: 4px 8px;
+    border-radius: 3px;
+    color: #666;
+}
+
+.available-cash {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.available-cash h1 {
+    font-size: 3.5rem;
+    color: #444;
+    font-weight: 300;
+}
+
+.available-cash p {
+    color: #999;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.btn-green {
+    background: #4caf50;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn-dark {
+    background: #444;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.funds-details {
+    text-align: left;
+    margin-top: 40px;
+    border-top: 1px solid #f1f1f1;
+    padding-top: 20px;
+}
+
+.fund-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #f9f9f9;
+    font-size: 0.9rem;
+}

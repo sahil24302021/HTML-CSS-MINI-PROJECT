@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard / Kite</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="dash-nav">
+        <div class="dash-left">
+            <div style="font-weight: 700; color: #ff5722; font-size: 1.2rem; margin-right: 20px;">Kite</div>
+
+            <div style="font-size: 0.85rem; font-weight: 500;">
+                <span style="color: #666;">NIFTY</span>
+                <span style="color: #df514c;">19,542.65</span>
+                <span style="font-size: 0.75rem; color: #999;">-45.20 (-0.23%)</span>
+            </div>
+            <div style="font-size: 0.85rem; font-weight: 500; margin-left: 20px;">
+                <span style="color: #666;">SENSEX</span>
+                <span style="color: #4caf50;">65,890.00</span>
+                <span style="font-size: 0.75rem; color: #999;">+120.50 (+0.18%)</span>
+            </div>
+        </div>
+
+        <div class="dash-right">
+            <a href="dashboard.html" style="color: #ff5722;">Dashboard</a>
+            <a href="orders.html">Orders</a> <a href="holdings.html">Holdings</a> <a href="#">Positions</a>
+            <a href="funds.html">Funds</a> <a href="index.html">Logout</a>
+        </div>
+    </nav>
+
+    <div class="dash-layout">
+
+        <aside class="sidebar">
+            <div style="padding: 15px; border-bottom: 1px solid #eee;">
+                <input type="text" placeholder="Search eg: infy, bse, nifty..."
+                    style="width: 100%; padding: 10px; border: 1px solid #ddd; outline: none; font-size: 0.9rem;">
+            </div>
+
+            <div class="market-item"
+                style="flex-direction: column; align-items: flex-start; background-color: #f9fbff;">
+                <div style="display: flex; justify-content: space-between; width: 100%;">
+                    <span class="stock">RELIANCE</span>
+                    <span class="price-down">2,450.00 <span style="font-size: 0.75rem;">-1.2%</span></span>
+                </div>
+                <div style="margin-top: 10px; display: flex; gap: 8px;">
+                    <a href="#buy-window"
+                        style="background-color: #4184f3; color: white; padding: 4px 15px; font-size: 0.75rem; border-radius: 3px; font-weight: 600;">B</a>
+                    <a href="#"
+                        style="background-color: #ff5722; color: white; padding: 4px 15px; font-size: 0.75rem; border-radius: 3px; font-weight: 600;">S</a>
+                    <a href="#"
+                        style="border: 1px solid #ddd; color: #444; padding: 4px 8px; font-size: 0.75rem; border-radius: 3px;"><i
+                            class="fas fa-chart-line"></i></a>
+                    <a href="#"
+                        style="border: 1px solid #ddd; color: #444; padding: 4px 8px; font-size: 0.75rem; border-radius: 3px;"><i
+                            class="fas fa-ellipsis-h"></i></a>
+                </div>
+            </div>
+
+            <div class="market-item">
+                <span class="stock">TCS</span>
+                <span class="price-up">3,560.00 <span style="font-size: 0.75rem;">+0.8%</span></span>
+            </div>
+            <div class="market-item">
+                <span class="stock">INFY</span>
+                <span class="price-down">1,420.00 <span style="font-size: 0.75rem;">-0.4%</span></span>
+            </div>
+            <div class="market-item">
+                <span class="stock">HDFCBANK</span>
+                <span class="price-up">1,600.00 <span style="font-size: 0.75rem;">+0.1%</span></span>
+            </div>
+            <div class="market-item">
+                <span class="stock">ADANIENT</span>
+                <span class="price-up">2,400.00 <span style="font-size: 0.75rem;">+2.1%</span></span>
+            </div>
+        </aside>
+
+        <main class="main-dash">
+            <h1>Hi, Trader</h1>
+
+            <div class="holdings-card">
+                <div
+                    style="display: flex; gap: 10px; justify-content: center; align-items: center; margin-bottom: 10px; color: #666;">
+                    <i class="fas fa-chart-pie"></i>
+                    <h3>Total Investment</h3>
+                </div>
+                <div class="big-val">₹ 4,52,000.50</div>
+                <div style="margin-top: 15px; font-size: 1rem;">
+                    Current Value: <span style="color: #4caf50; font-weight: 600;">₹ 4,80,000 (+6.5%)</span>
+                </div>
+            </div>
+
+            <div style="margin-top: 50px; max-width: 650px;">
+                <h3 style="font-size: 0.9rem; color: #999; margin-bottom: 20px; font-weight: 600;">PROFIT OVERVIEW</h3>
+                <div
+                    style="display: flex; align-items: flex-end; height: 200px; gap: 8px; border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+                    <div
+                        style="background: #eef5ff; border: 1px solid #387ed1; width: 100%; height: 40%; border-radius: 2px 2px 0 0;">
+                    </div>
+                    <div
+                        style="background: #eef5ff; border: 1px solid #387ed1; width: 100%; height: 60%; border-radius: 2px 2px 0 0;">
+                    </div>
+                    <div
+                        style="background: #fff0f0; border: 1px solid #df514c; width: 100%; height: 30%; border-radius: 2px 2px 0 0;">
+                    </div>
+                    <div
+                        style="background: #eef5ff; border: 1px solid #387ed1; width: 100%; height: 80%; border-radius: 2px 2px 0 0;">
+                    </div>
+                    <div
+                        style="background: #eef5ff; border: 1px solid #387ed1; width: 100%; height: 50%; border-radius: 2px 2px 0 0;">
+                    </div>
+                    <div
+                        style="background: #eef5ff; border: 1px solid #387ed1; width: 100%; height: 90%; border-radius: 2px 2px 0 0;">
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="buy-window" class="modal-overlay">
+        <div class="buy-window">
+            <div class="buy-header">
+                <span>Buy RELIANCE x 1 Qty</span>
+                <a href="#" style="color: white; font-weight: bold; font-size: 1.1rem;">✕</a>
+            </div>
+
+            <div class="buy-body">
+                <div style="margin-bottom: 20px; display: flex; gap: 15px; font-size: 0.9rem;">
+                    <label><input type="radio" name="exchange" checked> BSE: 2450.00</label>
+                    <label><input type="radio" name="exchange"> NSE: 2450.10</label>
+                </div>
+
+                <div style="margin-bottom: 20px; display: flex; gap: 15px; font-size: 0.85rem;">
+                    <label><input type="radio" name="type" checked> Longterm (CNC)</label>
+                    <label><input type="radio" name="type"> Intraday (MIS)</label>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group" style="flex: 1;">
+                        <label>Qty</label>
+                        <input type="number" value="1">
+                    </div>
+                    <div class="input-group" style="flex: 1;">
+                        <label>Price</label>
+                        <input type="number" value="2450.00">
+                    </div>
+                </div>
+            </div>
+
+            <div class="buy-footer">
+                <button class="btn-submit">Buy</button>
+                <a href="#" class="btn-cancel">Cancel</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
