@@ -1,102 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orders / Kite</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
 
-    <nav class="dash-nav">
-        <div class="dash-left">
-            <div style="font-weight: 700; color: #ff5722; font-size: 1.2rem; margin-right: 20px;">Kite</div>
-            <div style="font-size: 0.85rem; font-weight: 500;">
-                <span style="color: #666;">NIFTY</span> <span style="color: #df514c;">19,542.65</span>
+<body class="dashboard-body">
+
+    <header class="kite-header">
+        <div class="kite-logo">
+            <img src="https://zerodha.com/static/images/logo.svg" alt="Kite" style="height: 18px;">
+            <div class="indices">
+                <div class="index-item">
+                    <span class="index-name">NIFTY 50</span>
+                    <span class="index-val">19,435.30</span>
+                    <span class="index-change up">55.10 (0.28%)</span>
+                </div>
+                <div class="index-item">
+                    <span class="index-name">SENSEX</span>
+                    <span class="index-val">65,387.15</span>
+                    <span class="index-change up">165.25 (0.25%)</span>
+                </div>
             </div>
         </div>
-        <div class="dash-right">
+        <nav class="kite-nav">
             <a href="dashboard.html">Dashboard</a>
-            <a href="#" class="active" style="color: #ff5722;">Orders</a> <a href="holdings.html">Holdings</a>
-            <a href="#">Positions</a>
+            <a href="orders.html" class="active">Orders</a>
+            <a href="holdings.html">Holdings</a>
+            <a href="positions.html">Positions</a>
             <a href="funds.html">Funds</a>
-            <a href="index.html">Logout</a> 
-        </div>
-    </nav>
-
-    <div class="dash-layout">
-        <aside class="sidebar">
-            <div style="padding: 15px; border-bottom: 1px solid #eee;">
-                <input type="text" placeholder="Search eg: infy, bse, nifty..." style="width: 100%; padding: 10px; border: 1px solid #ddd; outline: none;">
+        </nav>
+        <div class="user-profile">
+            <span class="avatar">SK</span>
+            <span class="user-id">SAHILJ</span>
+            <div class="dropdown-menu">
+                <a href="#">My Profile</a>
+                <a href="#">Console</a>
+                <a href="#">Coin</a>
+                <a href="#">Support</a>
+                <a href="index.html">Logout</a>
             </div>
-            <div class="market-item"><span class="stock">RELIANCE</span><span class="price-down">2,450.00 -1.2%</span></div>
-            <div class="market-item"><span class="stock">TCS</span><span class="price-up">3,560.00 +0.8%</span></div>
+        </div>
+    </header>
+
+    <div class="kite-container">
+        <aside class="marketwatch">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search eg: INFY, BSE, NIFTY">
+                <span class="mw-count">5 / 50</span>
+            </div>
+
+            <div class="stock-list">
+                <div class="stock-item">
+                    <div class="stock-info">
+                        <span class="stock-name">INFY</span>
+                        <span class="stock-exch">NSE</span>
+                    </div>
+                    <div class="stock-price">
+                        <span class="price down">1,453.20</span>
+                        <div class="percent">
+                            <span class="down">-12.50 (-0.85%)</span>
+                            <i class="fas fa-chevron-down down"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stock-item">
+                    <div class="stock-info">
+                        <span class="stock-name">RELIANCE</span>
+                        <span class="stock-exch">NSE</span>
+                    </div>
+                    <div class="stock-price">
+                        <span class="price up">2,560.80</span>
+                        <div class="percent">
+                            <span class="up">+15.40 (+0.60%)</span>
+                            <i class="fas fa-chevron-up up"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stock-item">
+                    <div class="stock-info">
+                        <span class="stock-name">TCS</span>
+                        <span class="stock-exch">NSE</span>
+                    </div>
+                    <div class="stock-price">
+                        <span class="price up">3,450.00</span>
+                        <div class="percent">
+                            <span class="up">+22.00 (+0.64%)</span>
+                            <i class="fas fa-chevron-up up"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stock-item">
+                    <div class="stock-info">
+                        <span class="stock-name">HDFCBANK</span>
+                        <span class="stock-exch">NSE</span>
+                    </div>
+                    <div class="stock-price">
+                        <span class="price down">1,640.50</span>
+                        <div class="percent">
+                            <span class="down">-5.20 (-0.32%)</span>
+                            <i class="fas fa-chevron-down down"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stock-item active">
+                    <div class="stock-info">
+                        <span class="stock-name">SBIN</span>
+                        <span class="stock-exch">NSE</span>
+                    </div>
+                    <div class="stock-price">
+                        <span class="price up">585.30</span>
+                        <div class="percent">
+                            <span class="up">+4.10 (+0.71%)</span>
+                            <i class="fas fa-chevron-up up"></i>
+                        </div>
+                    </div>
+                    <div class="buy-sell-actions">
+                        <button class="btn-buy">B</button>
+                        <button class="btn-sell">S</button>
+                    </div>
+                </div>
+                
+                <div class="stock-item">
+                    <div class="stock-info">
+                        <span class="stock-name">TATAMOTORS</span>
+                        <span class="stock-exch">NSE</span>
+                    </div>
+                    <div class="stock-price">
+                        <span class="price up">620.10</span>
+                        <div class="percent">
+                            <span class="up">+8.20 (+1.34%)</span>
+                            <i class="fas fa-chevron-up up"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="stock-item">
+                    <div class="stock-info">
+                        <span class="stock-name">WIPRO</span>
+                        <span class="stock-exch">NSE</span>
+                    </div>
+                    <div class="stock-price">
+                        <span class="price down">410.00</span>
+                        <div class="percent">
+                            <span class="down">-1.50 (-0.36%)</span>
+                            <i class="fas fa-chevron-down down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mw-footer">
+                <div class="mw-pagination">
+                    <span class="page-num active">1</span>
+                    <span class="page-num">2</span>
+                    <span class="page-num">3</span>
+                    <span class="page-num">4</span>
+                    <span class="page-num">5</span>
+                </div>
+                <div class="mw-settings">
+                    <i class="fas fa-cog"></i>
+                </div>
+            </div>
         </aside>
 
-        <main class="main-dash">
-            
-            <div class="sub-nav">
-                <a href="#">Open orders</a>
-                <a href="#" class="active">Executed</a>
-                <a href="#">GTT</a>
-                <a href="#">Baskets</a>
-                <a href="#">SIP</a>
+        <main class="dashboard-content">
+            <div class="orders-container">
+                <div class="page-tabs">
+                    <a href="#" class="tab-link">Open</a>
+                    <a href="#" class="tab-link active">Executed</a>
+                    <a href="#" class="tab-link">GTT</a>
+                    <a href="#" class="tab-link">Baskets</a>
+                    <a href="#" class="tab-link">SIP</a>
+                    <a href="#" class="tab-link">Alerts</a>
+                    <a href="#" class="tab-link">IPO</a>
+                </div>
+
+                <div class="order-list">
+                    <table class="holdings-table">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Type</th>
+                                <th>Instrument</th>
+                                <th>Product</th>
+                                <th>Qty.</th>
+                                <th>Avg.</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-grey">10:45:22</td>
+                                <td class="tag-cell"><span class="tag-sell">SELL</span></td>
+                                <td>TATASTEEL</td>
+                                <td>CNC</td>
+                                <td>100 / 100</td>
+                                <td>118.50</td>
+                                <td><span class="status-complete">COMPLETE</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-grey">09:15:05</td>
+                                <td class="tag-cell"><span class="tag-buy">BUY</span></td>
+                                <td>INFY</td>
+                                <td>CNC</td>
+                                <td>10 / 10</td>
+                                <td>1,342.00</td>
+                                <td><span class="status-complete">COMPLETE</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-grey">09:15:01</td>
+                                <td class="tag-cell"><span class="tag-buy">BUY</span></td>
+                                <td>RELIANCE</td>
+                                <td>MIS</td>
+                                <td>50 / 50</td>
+                                <td>2,450.00</td>
+                                <td><span class="status-complete">COMPLETE</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-grey">Yesterday</td>
+                                <td class="tag-cell"><span class="tag-buy">BUY</span></td>
+                                <td>HDFCBANK</td>
+                                <td>CNC</td>
+                                <td>25 / 25</td>
+                                <td>1,580.00</td>
+                                <td><span class="status-complete">COMPLETE</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-
-            <table class="holdings-table">
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>Type</th>
-                        <th>Instrument</th>
-                        <th>Product</th>
-                        <th>Qty.</th>
-                        <th>Avg. Price</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style="color: #999;">14:30:22</td>
-                        <td class="badge" style="color: #387ed1; background: none;">BUY</td>
-                        <td class="stock-name" style="color: #444; font-weight: 500;">INFY</td>
-                        <td>CNC</td>
-                        <td>10 / 10</td>
-                        <td>1,420.50</td>
-                        <td><span class="badge badge-complete">COMPLETE</span></td>
-                    </tr>
-                    <tr>
-                        <td style="color: #999;">11:15:05</td>
-                        <td class="badge" style="color: #df514c; background: none;">SELL</td>
-                        <td class="stock-name" style="color: #444; font-weight: 500;">TATASTEEL</td>
-                        <td>MIS</td>
-                        <td>50 / 50</td>
-                        <td>115.20</td>
-                        <td><span class="badge badge-complete">COMPLETE</span></td>
-                    </tr>
-                    <tr>
-                        <td style="color: #999;">10:05:40</td>
-                        <td class="badge" style="color: #387ed1; background: none;">BUY</td>
-                        <td class="stock-name" style="color: #444; font-weight: 500;">RELIANCE</td>
-                        <td>CNC</td>
-                        <td>1 / 1</td>
-                        <td>2,455.00</td>
-                        <td><span class="badge badge-rejected">REJECTED</span></td>
-                    </tr>
-                    <tr>
-                        <td style="color: #999;">09:15:01</td>
-                        <td class="badge" style="color: #387ed1; background: none;">BUY</td>
-                        <td class="stock-name" style="color: #444; font-weight: 500;">HDFCBANK</td>
-                        <td>CNC</td>
-                        <td>5 / 5</td>
-                        <td>1,600.00</td>
-                        <td><span class="badge badge-complete">COMPLETE</span></td>
-                    </tr>
-                </tbody>
-            </table>
-
         </main>
     </div>
-
 </body>
+
 </html>

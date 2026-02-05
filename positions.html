@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions / Kite</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="dashboard-body">
+
+    <header class="kite-header">
+        <div class="kite-logo">
+            <img src="https://zerodha.com/static/images/logo.svg" alt="Kite" style="height: 18px;">
+            <div class="indices">
+                <div class="index-item">
+                    <span class="index-name">NIFTY 50</span>
+                    <span class="index-val">19,435.30</span>
+                    <span class="index-change up">55.10 (0.28%)</span>
+                </div>
+                <div class="index-item">
+                    <span class="index-name">SENSEX</span>
+                    <span class="index-val">65,387.15</span>
+                    <span class="index-change up">165.25 (0.25%)</span>
+                </div>
+            </div>
+        </div>
+        <nav class="kite-nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="orders.html">Orders</a>
+            <a href="holdings.html">Holdings</a>
+            <a href="positions.html" class="active">Positions</a>
+            <a href="funds.html">Funds</a>
+        </nav>
+        <div class="user-profile">
+            <span class="avatar">SK</span>
+            <span class="user-id">SAHILJ</span>
+            <div class="dropdown-menu">
+                <a href="#">My Profile</a>
+                <a href="#">Console</a>
+                <a href="#">Coin</a>
+                <a href="#">Support</a>
+                <a href="index.html">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="kite-container">
+        <aside class="marketwatch">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search eg: INFY, BSE, NIFTY">
+                <span class="mw-count">5 / 50</span>
+            </div>
+
+            <div class="stock-list">
+                <div class="stock-item">
+                    <div class="stock-info">
+                        <span class="stock-name">INFY</span>
+                        <span class="stock-exch">NSE</span>
+                    </div>
+                    <div class="stock-price">
+                        <span class="price down">1,453.20</span>
+                        <div class="percent">
+                            <span class="down">-12.50 (-0.85%)</span>
+                            <i class="fas fa-chevron-down down"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stock-item">
+                    <div class="stock-info">
+                        <span class="stock-name">RELIANCE</span>
+                        <span class="stock-exch">NSE</span>
+                    </div>
+                    <div class="stock-price">
+                        <span class="price up">2,560.80</span>
+                        <div class="percent">
+                            <span class="up">+15.40 (+0.60%)</span>
+                            <i class="fas fa-chevron-up up"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stock-item">
+                    <div class="stock-info">
+                        <span class="stock-name">TCS</span>
+                        <span class="stock-exch">NSE</span>
+                    </div>
+                    <div class="stock-price">
+                        <span class="price up">3,450.00</span>
+                        <div class="percent">
+                            <span class="up">+22.00 (+0.64%)</span>
+                            <i class="fas fa-chevron-up up"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stock-item">
+                    <div class="stock-info">
+                        <span class="stock-name">HDFCBANK</span>
+                        <span class="stock-exch">NSE</span>
+                    </div>
+                    <div class="stock-price">
+                        <span class="price down">1,640.50</span>
+                        <div class="percent">
+                            <span class="down">-5.20 (-0.32%)</span>
+                            <i class="fas fa-chevron-down down"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stock-item active">
+                    <div class="stock-info">
+                        <span class="stock-name">SBIN</span>
+                        <span class="stock-exch">NSE</span>
+                    </div>
+                    <div class="stock-price">
+                        <span class="price up">585.30</span>
+                        <div class="percent">
+                            <span class="up">+4.10 (+0.71%)</span>
+                            <i class="fas fa-chevron-up up"></i>
+                        </div>
+                    </div>
+                    <div class="buy-sell-actions">
+                        <button class="btn-buy">B</button>
+                        <button class="btn-sell">S</button>
+                    </div>
+                </div>
+                
+                <div class="stock-item">
+                    <div class="stock-info">
+                        <span class="stock-name">TATAMOTORS</span>
+                        <span class="stock-exch">NSE</span>
+                    </div>
+                    <div class="stock-price">
+                        <span class="price up">620.10</span>
+                        <div class="percent">
+                            <span class="up">+8.20 (+1.34%)</span>
+                            <i class="fas fa-chevron-up up"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="stock-item">
+                    <div class="stock-info">
+                        <span class="stock-name">WIPRO</span>
+                        <span class="stock-exch">NSE</span>
+                    </div>
+                    <div class="stock-price">
+                        <span class="price down">410.00</span>
+                        <div class="percent">
+                            <span class="down">-1.50 (-0.36%)</span>
+                            <i class="fas fa-chevron-down down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mw-footer">
+                <div class="mw-pagination">
+                    <span class="page-num active">1</span>
+                    <span class="page-num">2</span>
+                    <span class="page-num">3</span>
+                    <span class="page-num">4</span>
+                    <span class="page-num">5</span>
+                </div>
+                <div class="mw-settings">
+                    <i class="fas fa-cog"></i>
+                </div>
+            </div>
+        </aside>
+
+        <main class="dashboard-content">
+            
+            <div class="page-tabs">
+                <a href="#" class="tab-link active">Daywise</a>
+                <a href="#" class="tab-link">Netwise</a>
+            </div>
+
+            <div class="holdings-section">
+                <table class="holdings-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Instrument</th>
+                            <th>Qty.</th>
+                            <th>Avg.</th>
+                            <th>LTP</th>
+                            <th>P&L</th>
+                            <th>Chg.</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-muted text-small">MIS</td>
+                            <td class="symbol">ADANIENT</td>
+                            <td class="down">-50</td>
+                            <td>2,450.00</td>
+                            <td>2,440.00</td>
+                            <td class="up">+500.00</td>
+                            <td class="down">-0.40%</td>
+                        </tr>
+                        <tr>
+                            <td class="text-muted text-small">NRML</td>
+                            <td class="symbol">NIFTY 28 SEP 19500 CE</td>
+                            <td class="up">+50</td>
+                            <td>85.00</td>
+                            <td>92.50</td>
+                            <td class="up">+375.00</td>
+                            <td class="up">+8.82%</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5">Total</td>
+                            <td class="up" style="font-size: 1.1rem; font-weight: 500;">+875.00</td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+        </main>
+    </div>
+</body>
+
+</html>
